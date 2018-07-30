@@ -1,0 +1,93 @@
+<h2>Show Character</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @character.name %>
+  </li>
+
+  <li>
+    <strong>Archetype:</strong>
+    <%= @character.archetype %>
+  </li>
+
+  <li>
+    <strong>Career:</strong>
+    <%= @character.career %>
+  </li>
+
+  <li>
+    <strong>Player name:</strong>
+    <%= @character.player_name %>
+  </li>
+
+  <li>
+    <strong>Brawn:</strong>
+    <%= @character.brawn %>
+  </li>
+
+  <li>
+    <strong>Agility:</strong>
+    <%= @character.agility %>
+  </li>
+
+  <li>
+    <strong>Intellect:</strong>
+    <%= @character.intellect %>
+  </li>
+
+  <li>
+    <strong>Cunning:</strong>
+    <%= @character.cunning %>
+  </li>
+
+  <li>
+    <strong>Willpower:</strong>
+    <%= @character.willpower %>
+  </li>
+
+  <li>
+    <strong>Presence:</strong>
+    <%= @character.presence %>
+  </li>
+
+  <li>
+    <strong>Soak:</strong>
+    <%= @character.soak %>
+  </li>
+
+  <li>
+    <strong>Strain threshold:</strong>
+    <%= @character.strain_threshold %>
+  </li>
+
+  <li>
+    <strong>Strain:</strong>
+    <%= @character.strain %>
+  </li>
+
+  <li>
+    <strong>Wound threshold:</strong>
+    <%= @character.wound_threshold %>
+  </li>
+
+  <li>
+    <strong>Wounds:</strong>
+    <%= @character.wounds %>
+  </li>
+
+  <li>
+    <strong>Melee defense:</strong>
+    <%= @character.melee_defense %>
+  </li>
+
+  <li>
+    <strong>Ranged defense:</strong>
+    <%= @character.ranged_defense %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: character_path(@conn, :edit, @character) %></span>
+<span><%= link "Back", to: character_path(@conn, :index) %></span>

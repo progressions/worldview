@@ -1,0 +1,58 @@
+<h2>Listing Characters</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Archetype</th>
+      <th>Career</th>
+      <th>Player name</th>
+      <th>Brawn</th>
+      <th>Agility</th>
+      <th>Intellect</th>
+      <th>Cunning</th>
+      <th>Willpower</th>
+      <th>Presence</th>
+      <th>Soak</th>
+      <th>Strain threshold</th>
+      <th>Strain</th>
+      <th>Wound threshold</th>
+      <th>Wounds</th>
+      <th>Melee defense</th>
+      <th>Ranged defense</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for character <- @characters do %>
+    <tr>
+      <td><%= character.name %></td>
+      <td><%= character.archetype %></td>
+      <td><%= character.career %></td>
+      <td><%= character.player_name %></td>
+      <td><%= character.brawn %></td>
+      <td><%= character.agility %></td>
+      <td><%= character.intellect %></td>
+      <td><%= character.cunning %></td>
+      <td><%= character.willpower %></td>
+      <td><%= character.presence %></td>
+      <td><%= character.soak %></td>
+      <td><%= character.strain_threshold %></td>
+      <td><%= character.strain %></td>
+      <td><%= character.wound_threshold %></td>
+      <td><%= character.wounds %></td>
+      <td><%= character.melee_defense %></td>
+      <td><%= character.ranged_defense %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: character_path(@conn, :show, character), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: character_path(@conn, :edit, character), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: character_path(@conn, :delete, character), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Character", to: character_path(@conn, :new) %></span>

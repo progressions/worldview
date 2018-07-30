@@ -1,0 +1,113 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :name, class: "control-label" %>
+    <%= text_input f, :name, class: "form-control" %>
+    <%= error_tag f, :name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :archetype, class: "control-label" %>
+    <%= text_input f, :archetype, class: "form-control" %>
+    <%= error_tag f, :archetype %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :career, class: "control-label" %>
+    <%= text_input f, :career, class: "form-control" %>
+    <%= error_tag f, :career %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :player_name, class: "control-label" %>
+    <%= text_input f, :player_name, class: "form-control" %>
+    <%= error_tag f, :player_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :brawn, class: "control-label" %>
+    <%= number_input f, :brawn, class: "form-control" %>
+    <%= error_tag f, :brawn %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :agility, class: "control-label" %>
+    <%= number_input f, :agility, class: "form-control" %>
+    <%= error_tag f, :agility %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :intellect, class: "control-label" %>
+    <%= number_input f, :intellect, class: "form-control" %>
+    <%= error_tag f, :intellect %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :cunning, class: "control-label" %>
+    <%= number_input f, :cunning, class: "form-control" %>
+    <%= error_tag f, :cunning %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :willpower, class: "control-label" %>
+    <%= number_input f, :willpower, class: "form-control" %>
+    <%= error_tag f, :willpower %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :presence, class: "control-label" %>
+    <%= number_input f, :presence, class: "form-control" %>
+    <%= error_tag f, :presence %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :soak, class: "control-label" %>
+    <%= number_input f, :soak, class: "form-control" %>
+    <%= error_tag f, :soak %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :strain_threshold, class: "control-label" %>
+    <%= number_input f, :strain_threshold, class: "form-control" %>
+    <%= error_tag f, :strain_threshold %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :strain, class: "control-label" %>
+    <%= number_input f, :strain, class: "form-control" %>
+    <%= error_tag f, :strain %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :wound_threshold, class: "control-label" %>
+    <%= number_input f, :wound_threshold, class: "form-control" %>
+    <%= error_tag f, :wound_threshold %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :wounds, class: "control-label" %>
+    <%= number_input f, :wounds, class: "form-control" %>
+    <%= error_tag f, :wounds %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :melee_defense, class: "control-label" %>
+    <%= number_input f, :melee_defense, class: "form-control" %>
+    <%= error_tag f, :melee_defense %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ranged_defense, class: "control-label" %>
+    <%= number_input f, :ranged_defense, class: "form-control" %>
+    <%= error_tag f, :ranged_defense %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
