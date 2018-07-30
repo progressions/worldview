@@ -19,7 +19,7 @@ defmodule WorldviewWeb.Router do
 
     get("/", PageController, :index)
 
-    resources "/characters", CharacterController
+    resources("/characters", CharacterController)
   end
 
   # Other scopes may use custom stacks.

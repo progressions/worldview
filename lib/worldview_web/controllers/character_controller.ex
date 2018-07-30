@@ -20,6 +20,7 @@ defmodule WorldviewWeb.CharacterController do
         conn
         |> put_flash(:info, "Character created successfully.")
         |> redirect(to: character_path(conn, :show, character))
+
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)
     end
@@ -44,6 +45,7 @@ defmodule WorldviewWeb.CharacterController do
         conn
         |> put_flash(:info, "Character updated successfully.")
         |> redirect(to: character_path(conn, :show, character))
+
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "edit.html", character: character, changeset: changeset)
     end
