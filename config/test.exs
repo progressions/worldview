@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :worldview, Worldview.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "ipriestley",
+  password: "",
   database: "worldview_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
