@@ -1,5 +1,12 @@
 # Worldview
 
+A character manager for the Genesys system.
+
+- allow simple data entry to create characters
+- no complex validations or data dependencies
+- character will be a single table with as few fields as possible
+
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
